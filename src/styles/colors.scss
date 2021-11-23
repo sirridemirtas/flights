@@ -1,0 +1,19 @@
+:root {
+  --c-theme: #0070f3;
+  --c-theme-tint-10: #e6f1fe;
+  --c-on-theme: #fff;
+
+  --c-bg: #fff;
+  --c-on-bg: #333;
+  --c-bg-tp: hsla(0,0%,100%,0.8);
+
+  --backdrop-filter: saturate(180%) blur(5px);
+
+  --c-text: #333;
+  --c-text-light: #545454;
+  --c-border: #eaeaea;
+
+  --border: 1px solid var(--border-color);
+  --border-radius: 5px;
+  --green: #34c759;
+}

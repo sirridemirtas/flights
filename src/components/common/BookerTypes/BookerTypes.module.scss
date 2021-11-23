@@ -1,0 +1,14 @@
+.bookerTypes {
+  margin: 16px 0;
+  background: rgba(128, 128, 128, .05);
+  backdrop-filter: var(--backdrop-filter);
+  border-radius: 8px;
+  padding: 0 8px;
+  display: flex;
+  height: 42px;
+  vertical-align: center;
+
+  & > *:not(:last-child) {
+    _margin-right: 8px;
+  }
+}

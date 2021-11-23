@@ -1,0 +1,35 @@
+body {
+  background: red;
+}
+
+.layout {
+  margin: auto;
+  min-height: 1400px;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1080px;
+  margin: auto;
+  padding: 0 16px;
+}
+
+.nav {
+  z-index: 100;
+  position: sticky;
+  top: 0; left: 0;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  border-bottom: 1px solid var(--c-border);
+  background: var(--c-bg-tp);
+  backdrop-filter: var(--backdrop-filter);
+  /* background: -webkit-linear-gradient(left, rgba(20,196,251,0.85), rgba(23,103,239,0.85));
+  background: linear-gradient(to left, rgba(23,103,239,0.85), rgba(20,196,251,0.85));
+  color: #fff;
+  transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1); */
+
+  .logo {
+    font-size: 20px;
+  }
+}

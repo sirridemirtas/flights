@@ -1,0 +1,91 @@
+.searchResult {
+  border: 1px solid var(--c-border);
+  margin-top: 40px;
+  padding: 16px;
+  border-radius: 8px;
+  background: var(--c-bg-tp);
+  backdrop-filter: var(--backdrop-filter);
+  box-shadow: 0 11px 15px -7px rgba(0,0,0,.05);
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 16px;
+
+    li {
+      display: flex;
+      flex-wrap: nowrap;
+      padding: 12px 8px;
+      cursor: pointer;
+
+      & > div {
+        _width: 100%;
+
+        span {
+          display: block;
+          font-size: 75%;
+          color: #666;
+          margin-top: 4px;
+        }
+
+        &.time {
+          width: 50%;
+          _border: 1px solid green;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+
+          .line {
+            height: 1px;
+            min-width: 100px;
+            width: 100%;
+            margin: 0 20px;
+            background-color: var(--c-border);
+            vertical-align: middle;
+          }
+
+          div:last-child {
+            text-align: right;
+          }
+        }
+      }
+
+      &:hover {
+        border-radius: 8px;
+        background: rgba(128, 128, 128, .05);
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--c-border);
+      }
+
+      .duration {
+        padding: 0 16px;
+        width: 25%;
+        _border: 1px solid blue;
+      }
+
+      .price {
+        text-align: right;
+        width: 25%;
+        _border: 1px solid red;
+      }
+
+      .flightDetail {
+        z-index: 1000;
+        position: fixed;
+        top: 0; bottom: 0;
+        left:0; right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, .32);
+        backdrop-filter: var(--backdrop-filter);
+
+        display: none;
+      }
+    }
+  }
+}
