@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-import cn from 'classnames';
 import { useNavigate } from 'react-router-dom';
 import ROUTES from '../../../constants/ROUTES';
 import { BookerTypes, Input } from '../';
@@ -39,7 +38,7 @@ function Search() {
   }
 
   return (
-    <div className={cn(styles.search)}>
+    <div className={styles.search}>
       <ul>
         <li className={styles.active}>Uçuş Ara / Bilet Al</li>
         <li>Check-in / Bilet Yönetimi</li>
