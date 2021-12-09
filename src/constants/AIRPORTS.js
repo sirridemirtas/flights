@@ -8,11 +8,6 @@ const AIRPORTS = {
     IATA_CODE: 'IST',
     CITY: 'İstanbul',
     NAME: 'İstanbul Havalimanı'
-  },
-  TZX: {
-    IATA_CODE: 'TZX',
-    CITY: 'Trabzon',
-    NAME: 'Trabzon Havalimanı'
   }
 };
 

@@ -12,11 +12,12 @@
     display: none;
 
     & + span {
+      flex: 1;
       width: 16px;
       height: 16px;
       border-radius: 12px;
       margin-right: 6px;
-      background: rgba(128, 128, 128, .38);
+      background: rgba(128, 128, 128, 0.38);
     }
 
     &:checked + span {

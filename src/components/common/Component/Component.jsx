@@ -1,10 +1,10 @@
-import cn from 'classnames';
-import PropTypes from 'prop-types';
+/* import cn from 'classnames';
+import PropTypes from 'prop-types'; */
 import styles from './Component.module.scss';
 
-const componentPropTypes = {};
+/* const componentPropTypes = {};
 
-const componentDefaultProps = {};
+const componentDefaultProps = {}; */
 
 function Component() {
   return (
@@ -14,7 +14,7 @@ function Component() {
   );
 }
 
-Component.propTypes = componentPropTypes;
-Component.defaultProps = componentDefaultProps;
+/* Component.propTypes = componentPropTypes;
+Component.defaultProps = componentDefaultProps; */
 
 export default Component;

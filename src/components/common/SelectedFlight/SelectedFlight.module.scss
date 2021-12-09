@@ -1,0 +1,9 @@
+.selectedFlight {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  _border: 1px solid var(--c-border);
+  _border-radius: 8px;
+  padding: 16px;
+  _background: rgba(242, 242, 242, 0.5);
+}

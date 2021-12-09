@@ -13,7 +13,7 @@ const radioButtonDefaultProps = {
   defaultChecked: false
 };
 
-function RadioButton({className, defaultChecked, label, name, value}) {
+function RadioButton({ className, defaultChecked, label, name, value }) {
   return (
     <label className={cn(styles.radioButton, className)}>
       <input

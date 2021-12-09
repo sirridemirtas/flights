@@ -1,91 +1,117 @@
 .searchResult {
   border: 1px solid var(--c-border);
-  margin-top: 40px;
   padding: 16px;
   border-radius: 8px;
-  background: var(--c-bg-tp);
-  backdrop-filter: var(--backdrop-filter);
-  box-shadow: 0 11px 15px -7px rgba(0,0,0,.05);
+  _background: var(--c-bg-tp);
+  _backdrop-filter: var(--backdrop-filter);
+  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.05);
+  background: var(--c-bg);
 
-  ul {
-    list-style-type: none;
+  .options {
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    background: transparent;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 8px 0;
+    background: var(--c-bg);
+
+    label {
+      font-size: initial;
+      padding: 8px 16px;
+      border-radius: 32px;
+      background: var(--c-hover);
+      border: 1px solid var(--c-border);
+    }
+  }
+
+  table {
+    border: 0;
     margin: 0;
-    padding: 0;
-    margin-top: 16px;
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
 
-    li {
-      display: flex;
-      flex-wrap: nowrap;
-      padding: 12px 8px;
-      cursor: pointer;
+    tr {
+      margin: 0;
+      padding: 0;
+      _cursor: pointer;
 
-      & > div {
-        _width: 100%;
+      .tdActions {
+        text-align: right;
+        _width: 120px;
+      }
 
-        span {
-          display: block;
-          font-size: 75%;
-          color: #666;
-          margin-top: 4px;
-        }
-
-        &.time {
-          width: 50%;
-          _border: 1px solid green;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-
-          .line {
-            height: 1px;
-            min-width: 100px;
-            width: 100%;
-            margin: 0 20px;
-            background-color: var(--c-border);
-            vertical-align: middle;
-          }
-
-          div:last-child {
-            text-align: right;
-          }
-        }
+      & .selectButton {
+        filter: grayscale(100%);
+        opacity: .3;
       }
 
       &:hover {
-        border-radius: 8px;
-        background: rgba(128, 128, 128, .05);
+        background: var(--c-hover);
+
+        & .selectButton {
+          filter: none;
+          opacity: 1;
+        }
       }
 
       &:not(:last-child) {
         border-bottom: 1px solid var(--c-border);
       }
 
-      .duration {
-        padding: 0 16px;
-        width: 25%;
-        _border: 1px solid blue;
+      span {
+        display: block;
+        font-size: 14px;
+        padding-top: 4px;
+        opacity: .6;
       }
 
-      .price {
-        text-align: right;
-        width: 25%;
-        _border: 1px solid red;
-      }
+      /* box-shadow:
+        4px 4px 0px 0px var(--c-theme) inset,
+        -4px -4px 0px 0px var(--c-theme) inset; */
 
-      .flightDetail {
-        z-index: 1000;
-        position: fixed;
-        top: 0; bottom: 0;
-        left:0; right: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(0, 0, 0, .32);
-        backdrop-filter: var(--backdrop-filter);
+    }
 
-        display: none;
+    thead {
+      /* position: sticky; top: 104px;
+      background: var(--c-bg);
+      z-index: 1; */
+
+      tr {
+        border-bottom: 1px solid var(--c-border);
+
+        &:hover {
+          background: none;
+        }
       }
+    }
+
+    td, th {
+      margin: 0;
+      padding: 12px 8px;
+    }
+
+    th {
+      font-weight: 500;
+      text-align: left;
+    }
+
+    .arrow {
+      _text-align: center;
+    }
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  .searchResult {
+    .options {
+      margin-bottom: 16px;
+      position: sticky; top: 56px;
     }
   }
 }

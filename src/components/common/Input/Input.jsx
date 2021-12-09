@@ -1,4 +1,3 @@
-import cn from 'classnames';
 import PropTypes from 'prop-types';
 import styles from './Input.module.scss';
 
@@ -14,14 +13,15 @@ const inputDefaultProps = {
   type: 'text'
 };
 
-function Input({defaultValue, label, placeholder, subText, type, ...props}) {
+function Input({ defaultValue, label, placeholder, subText, type, ...props }) {
   return (
     <label className={styles.input}>
-      { label }
+      {label}
       <input
         type={type && type}
         placeholder={placeholder}
         defaultValue={defaultValue}
+        autoComplete="off"
         {...props}
       />
       {subText && <span>{subText}</span>}

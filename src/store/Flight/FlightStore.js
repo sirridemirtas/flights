@@ -7,13 +7,19 @@ const FlightContext = createContext(null);
 
 const FlightProvider = ({ ...props }) => {
   const initialState = {
-    search: {
+    searchOptions: {
       bookerType: BOOKER_TYPES.ONE_WAY,
       from: AIRPORTS.IST,
       to: AIRPORTS.ESB,
-      departureDate: '2021-11-17',
+      departureDate: (() => (new Date()).toISOString().split('T')[0])(),
       returnDate: null,
-    }
+      passenger: {
+        count: 1,
+        cabin: 'Economy Class'
+      }
+    },
+    searchResults: null,
+    selectedFlight: null,
   };
 
   const [state, dispatch] = useReducer(FlightReducer, initialState);

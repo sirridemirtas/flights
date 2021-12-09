@@ -11,10 +11,10 @@ const bookerTypesDefaultProps = {
   name: 'bookerType'
 };
 
-function BookerTypes({name}) {
+function BookerTypes({ name }) {
   return (
     <div className={styles.bookerTypes}>
-      { Object.values(BOOKER_TYPES).map((bookerType, i) => (
+      {Object.values(BOOKER_TYPES).map((bookerType, i) => (
         <RadioButton
           key={i}
           name={name}
@@ -22,7 +22,7 @@ function BookerTypes({name}) {
           value={bookerType.value}
           defaultChecked={bookerType.defaultChecked}
         />
-      )) }
+      ))}
     </div>
   );
 }

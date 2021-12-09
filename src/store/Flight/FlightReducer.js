@@ -4,15 +4,11 @@ export const FlightReducer = (state, action) => {
   const { payload } = action;
 
   switch (action.type) {
-    case "GET_CUSTOMER":
-      return { ...state, authToken: FlightActions.setAuthToken(payload) }
+    case FlightActions.SEARCH_FLIGHT:
+      return { ...state, searchOptions: { ...state.searchOptions, ...payload } }
 
-    case "SWITCH_THEME":
-      return { ...state, theme: FlightActions.switchTheme(state.theme) }
-
-    case "SET_TITLE":
-      document.title = payload
-      return { ...state, title: payload }
+    case FlightActions.SELECT_FLIGHT:
+      return { ...state, selectedFlight: payload }
 
     default:
       return state;

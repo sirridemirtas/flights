@@ -2,12 +2,14 @@
   width: auto;
   display: inline-flex;
   flex-direction: column;
-  background: rgba(128, 128, 128, .05);
+  background: rgba(128, 128, 128, 0.05);
   border-radius: 8px;
   color: var(--c-theme);
   _font-size: 22px;
   padding: 12px 16px;
   border: 2px solid transparent;
+  min-height: 84px;
+  justify-content: space-between;
 
   &:focus-within {
     border-color: var(--c-theme);

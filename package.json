@@ -11,6 +11,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-polymorphic-box": "^3.0.3",
+    "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
@@ -18,7 +19,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "svg2comp": "svgr src/assets/icons -d src/components/icons --icon --replace-attr-values \"#fff=currentColor\""
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@svgr/cli": "^5.5.0",
     "node-sass": "^6.0.1",
     "prettier": "^2.4.1",
     "prop-types": "^15.7.2",

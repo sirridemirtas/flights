@@ -5,15 +5,31 @@
 
   --c-bg: #fff;
   --c-on-bg: #333;
-  --c-bg-tp: hsla(0,0%,100%,0.8);
+  --c-bg-tp: hsla(0, 0%, 100%, 0.8);
+
+  --c-hover: rgba(128, 128, 128, 0.05);
 
   --backdrop-filter: saturate(180%) blur(5px);
 
-  --c-text: #333;
+  --c-text: #222;
   --c-text-light: #545454;
   --c-border: #eaeaea;
+
+  --c-gray: #888;
 
   --border: 1px solid var(--border-color);
   --border-radius: 5px;
   --green: #34c759;
+
+  --c-gray-0: #fff;
+  --c-gray-50: #f6f8fb;
+  --c-gray-100: #e7ebf0;
+  --c-gray-200: #bcbfc1;
+  --c-gray-300: #a0a4a7;
+  --c-gray-400: #83888c;
+  --c-gray-500: #4a5056;
+  --c-gray-600: #373d43;
+  --c-gray-700: #252a2f;
+  --c-gray-800: #14171a;
+  --c-gray-900: #030405;
 }

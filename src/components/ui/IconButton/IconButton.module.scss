@@ -1,0 +1,32 @@
+.iconButton {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 24px;
+  background: none;
+  _color: var(--c-theme);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  _padding: 0 8px;
+  height: 36px;
+
+  svg {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: currentColor;
+  }
+
+  label {
+    padding-left: 6px;
+    padding-right: 12px;
+    cursor: inherit;
+  }
+
+  &:hover {
+    background: rgba(128, 128, 128, 0.05);
+  }
+}

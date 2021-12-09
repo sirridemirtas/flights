@@ -1,13 +1,13 @@
 .search {
-  margin-top: 48px;
+  _margin-top: 48px;
   padding: 16px;
   border: 1px solid var(--c-border);
   border-radius: 8px;
 
-  background: var(--c-bg-tp);
+  background: var(--c-bg);
   backdrop-filter: var(--backdrop-filter);
 
-  box-shadow: 0 11px 15px -7px rgba(0,0,0,.05);
+  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.05);
 
   h1 {
     margin: 0;
@@ -19,22 +19,34 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: inline-flex;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    overflow-x: auto;
+    min-height: 42px;
+    gap: 4px;
     padding: 3px;
-    background: rgba(128, 128, 128, .05);
+    background: rgba(128, 128, 128, 0.05);
     backdrop-filter: var(--backdrop-filter);
     border-radius: 8px;
 
     li {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
       border: 2px solid transparent;
-      padding: 8px 16px;
+      padding: 0px 16px;
       border-radius: 8px;
       user-select: none;
       cursor: pointer;
-
-      &:not(:last-child) {
-        margin-right: 4px;
+      & > * {
+        display: block;
       }
+
+      /* &:not(:last-child) {
+        margin-right: 4px;
+      } */
 
       &.active {
         background: #fff;
@@ -42,7 +54,7 @@
       }
 
       &:hover:not(.active) {
-        background: rgba(128, 128, 128, .1);
+        background: rgba(128, 128, 128, 0.1);
       }
     }
   }
@@ -66,7 +78,7 @@
     margin: 0;
     padding: 0 16px;
     display: flex;
-    min-height: 40px;
+    min-height: 42px;
     align-items: center;
     justify-content: center;
     border-radius: 8px;
@@ -79,6 +91,12 @@
 }
 
 @media screen and (max-width: 1024px) {
+  /* .search {
+    ul {
+      flex-direction: column;
+    }
+  } */
+
   .form {
     flex-wrap: wrap;
 
